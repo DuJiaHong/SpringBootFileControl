@@ -1,10 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
+<h1 th:inlines="text">文件夹下内容</h1>
+<p th:text="${path}">路径</p>
+<tr th:each="f : ${file}">
+    <td>
+        <p><a th:href="@{download/(path=${path},fileName=${f})}" th:text="${f}">路径</a></p>
+    </td>
+<!--    <td th:text="${user.userName}">xxx</td>-->
+<!--    <td th:text="${user.userPwd}">xxx</td>-->
+<!--    <td>-->
+<!--        <a th:href="@{/edit/{id}(id=${user.userID})}" class="ui button pink">编辑</a>-->
+<!--        <a th:href="@{/delete/{id}(id=${user.userID})}" class="ui button teal">删除</a>-->
+<!--    </td>-->
+</tr>
 
+<h1 th:inlines="text">文件上传</h1>
+<form action="fileUpload" method="post" enctype="multipart/form-data">
+    <p>选择文件: <input type="file" name="fileName"/></p>
+    <p><input type="submit" value="提交"/></p>
+</form>
+
+
+<h1 th:inlines="text">文件上传</h1>
+<form action="multifileUpload" method="post" enctype="multipart/form-data" >
+    <p>选择文件1: <input type="file" name="fileName"/></p>
+    <p>选择文件2: <input type="file" name="fileName"/></p>
+    <p>选择文件3: <input type="file" name="fileName"/></p>
+    <p><input type="submit" value="提交"/></p>
+</form>
 </body>
 </html>
