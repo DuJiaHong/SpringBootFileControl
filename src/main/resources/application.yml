@@ -1,6 +1,6 @@
 # 访问端口
 server:
-  port: 8088
+  port: 8089
 
 # 数据库数据源
 spring:
@@ -16,6 +16,10 @@ spring:
       # All files max size
       maxRequestSize: 20480MB
 
+  security:
+    user:
+      name: admin
+      password: admin
 
 #  datasource:
 #    driver-class-name: com.mysql.cj.jdbc.Driver
