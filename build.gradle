@@ -19,6 +19,8 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter'
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-freemarker'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
 //	添加thymeleaf 支持html页面显示
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf:2.5.6'
 //    mybatis
