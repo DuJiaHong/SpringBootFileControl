@@ -16,10 +16,10 @@ spring:
       # All files max size
       maxRequestSize: 20480MB
 
-  security:
-    user:
-      name: admin
-      password: admin
+#  security:
+#    user:
+#      name: admin
+#      password: admin
 
 #  datasource:
 #    driver-class-name: com.mysql.cj.jdbc.Driver
